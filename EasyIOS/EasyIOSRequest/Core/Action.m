@@ -157,7 +157,11 @@ DEF_SINGLETON(Action)
 
     [self sending:msg];
     @weakify(msg,self);
-    NSURLSessionDataTask *op = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * response, NSDictionary *responseObject, NSError * error) {
+    NSURLSessionDataTask *op = [manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if(error == nil){
             msg.output = responseObject;
             @strongify(msg,self);

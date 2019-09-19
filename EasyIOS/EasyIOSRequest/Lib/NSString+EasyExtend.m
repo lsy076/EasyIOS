@@ -144,12 +144,12 @@
 
 
 - (NSString *)urldecode {
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [self stringByRemovingPercentEncoding];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)urlencode {
-	NSString *encUrl = [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSString *encUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 	NSUInteger len = [encUrl length];
 	const char *c;
 	c = [encUrl UTF8String];
@@ -259,41 +259,6 @@
 	}
 	return [pairs componentsJoinedByString:@"&"];
 }
-
--(NSString *)getNameFromAddressBookWithPhoneNum{
-    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)    {
-//       addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-//        //等待同意后向下执行
-//        dispatch_semaphore_t sema = dispatch_semaphore_create(0);        ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error)                                                 {                                                     dispatch_semaphore_signal(sema);                                                 });
-//        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);         dispatch(sema);
-//    }else{
-//        addressBook = ABAddressBookCreate();
-//    }
-    CFArrayRef records;
-    if (addressBook) {
-        // 获取通讯录中全部联系人
-        records = ABAddressBookCopyArrayOfAllPeople(addressBook);
-    }else{
-        return nil;
-    }
-    // 遍历全部联系人，检查是否存在指定号码
-    for (int i=0; i<CFArrayGetCount(records); i++) {
-        ABRecordRef record = CFArrayGetValueAtIndex(records, i);
-        CFTypeRef items = ABRecordCopyValue(record, kABPersonPhoneProperty);
-        CFArrayRef phoneNums = ABMultiValueCopyArrayOfAllValues(items);
-        if (phoneNums) {
-            for (int j=0; j<CFArrayGetCount(phoneNums); j++) {                NSString *phone = (NSString*)CFArrayGetValueAtIndex(phoneNums, j);
-                phone = [phone getOutOfTheNumber];
-                if ([phone isEqualToString:self]) {
-                return (__bridge NSString*)ABRecordCopyCompositeName(record);
-            }
-            }
-        }
-    }
-    return nil;
-}
-
 
 - (NSString *)firstLetter
 {

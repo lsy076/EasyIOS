@@ -20,7 +20,6 @@
 - (NSString *)urldecode;
 - (NSString *)urlencode;
 - (NSString *)urlByAppendingDict:(NSDictionary *)params encoding:(BOOL)encoding;
-- (NSString *)getNameFromAddressBookWithPhoneNum;
 - (NSString *)firstLetter;
 - (NSString *)firstLetters;
 + (NSString *)jsonStringWithDictionary:(NSDictionary *)dictionary;
