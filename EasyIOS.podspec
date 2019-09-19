@@ -12,6 +12,8 @@ s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/lsy076/EasyIOS.git", :tag => s.version }
 s.source_files = "Classes", "EasyIOS/EasyIOS/**/*.{h,m}"
 s.requires_arc = true
-s.dependency 'AFNetworking', '~> 3.2.1'
-s.dependency 'ReactiveCocoa', '~> 2.4.4'
-s.dependency 'JSONModel'
+s.dependency   = {
+'AFNetworking', '~> 3.2.1'
+'ReactiveCocoa', '~> 2.4.4'
+'JSONModel'
+} 
