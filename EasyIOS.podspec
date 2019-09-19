@@ -13,3 +13,6 @@ s.source       = { :git => "https://github.com/lsy076/EasyIOS.git", :tag => s.ve
 s.source_files = "Classes", "EasyIOS/EasyIOS/**/*.{h,m}"
 s.requires_arc = true
 s.dependency 'AFNetworking', '~> 3.2.1'
+s.dependency 'ReactiveCocoa', '~> 2.4.4'
+s.dependency 'JSONModel'
+end
