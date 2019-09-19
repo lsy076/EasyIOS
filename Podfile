@@ -6,6 +6,6 @@ target 'EasyIOS' do
   
 pod 'AFNetworking'
 pod 'ReactiveObjC'
-pod 'JSONModel
+pod 'JSONModel'
 
 end

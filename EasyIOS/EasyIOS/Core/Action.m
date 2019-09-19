@@ -7,7 +7,7 @@
 //
 
 #import "Action.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface Action()
 @property(nonatomic,assign)BOOL cacheEnable;
