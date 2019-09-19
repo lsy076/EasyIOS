@@ -14,7 +14,13 @@
 
 #pragma mark - Singleton
 + (instancetype)navigation{
-    GCDSharedInstance(^{ return [[self alloc] init]; });
+    
+    static URLNavigation *sharedClient = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedClient = [[URLNavigation alloc] init];
+    });
+    return sharedClient;
 }
 
 #pragma mark - Public Method
