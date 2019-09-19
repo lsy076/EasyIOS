@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 year zhuchao. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "<JSONModel/JSONModel.h>"
 
 #import "Action.h"
 #import "SceneModel.h"
