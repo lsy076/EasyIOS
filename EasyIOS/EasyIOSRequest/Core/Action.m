@@ -183,13 +183,7 @@ DEF_SINGLETON(Action)
 
     msg.url = op.currentRequest.URL;
     msg.op = op;
-    //GCDQueue
-//    msg.output = [[TMCache sharedCache] objectForKey:msg.cacheKey];
-//    if (_dataFromCache == YES && msg.output !=nil) {
-//        [[GCDQueue mainQueue] queueBlock:^{
-//            [self checkCode:msg];
-//        } afterDelay:0.1f];
-//    }
+    
     [op resume];
     return op;
 }
