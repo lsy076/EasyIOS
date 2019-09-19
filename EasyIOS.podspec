@@ -15,4 +15,4 @@ s.requires_arc = true
 s.dependency 'AFNetworking'
 s.dependency 'ReactiveCocoa
 s.dependency 'JSONModel'
-End
+end
