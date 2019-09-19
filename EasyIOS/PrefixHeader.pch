@@ -14,7 +14,7 @@
 
 #ifdef __OBJC__
 
-#import "EasyIOS/EasyIOS.h"
+//#import "EasyIOS/EasyIOS.h"
 
 #endif
 
