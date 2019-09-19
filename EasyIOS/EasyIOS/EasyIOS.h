@@ -7,8 +7,6 @@
 //
 
 #import <JSONModel/JSONModel.h>
-#import <ReactiveObjC/ReactiveObjC.h>
-#import <AFNetworking/AFNetworking.h>
 
 #import "Action.h"
 #import "SceneModel.h"
