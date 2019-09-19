@@ -8,6 +8,7 @@
 
 #import "Action.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "EasyIOS.h"
 
 @interface Action()
 @property(nonatomic,assign)BOOL cacheEnable;
@@ -160,13 +161,14 @@ DEF_SINGLETON(Action)
         if(error == nil){
             msg.output = responseObject;
             @strongify(msg,self);
-            //TMCache
-//            if(_cacheEnable && [self doCheckCode:msg]){
-//                [[TMCache sharedCache] setObject:responseObject forKey:msg.cacheKey block:^(TMCache *cache, NSString *key, id object) {
-//                    EZLog(@"%@ has cached",url);
-//                }];
-//            }
+            
             [self checkCode:msg];
+            
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:0];
+            NSString *dataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            
+            EZLog(@"网络请求结果 : %@", dataStr);
+            
         }else{
             @strongify(msg,self);
             msg.error = error;
