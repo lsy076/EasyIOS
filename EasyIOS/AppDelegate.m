@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [Action actionConfigScheme:@"http" host:@"weather.gtimg.cn" client:@"" codeKey:@"" rightCode:200 msgKey:@""];
+    [Action actionConfigScheme:@"http" host:@"weather.gtimg.cn" client:@"" codeKey:@"" rightCode:200 msgKey:@""];
     return YES;
 }
 

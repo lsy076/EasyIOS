@@ -173,6 +173,7 @@ DEF_SINGLETON(Action)
             @strongify(msg,self);
             msg.error = error;
             [self failed:msg];
+            
         }
     }];
 
