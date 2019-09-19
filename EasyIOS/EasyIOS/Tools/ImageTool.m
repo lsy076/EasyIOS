@@ -8,6 +8,8 @@
 
 #import "ImageTool.h"
 #import<Accelerate/Accelerate.h>
+#import "EasyKit.h"
+
 @implementation ImageTool
 
 + (ImageTool *)sharedInstance

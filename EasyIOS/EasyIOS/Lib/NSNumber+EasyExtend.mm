@@ -5,6 +5,8 @@
 #import "NSNumber+EasyExtend.h"
 #import "NSDate+EasyExtend.h"
 #import "NSString+EasyExtend.h"
+#import "NSObject+EasyJSON.h"
+
 // ----------------------------------
 // Source code
 // ----------------------------------

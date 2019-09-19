@@ -11,6 +11,8 @@
 #import "NSObject+EasyTypeConversion.h"
 #import <AddressBook/AddressBook.h>
 #import "pinyin.h"
+#import "NSObject+EasyJSON.h"
+
 @implementation NSString (EasyExtend)
 
 //#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

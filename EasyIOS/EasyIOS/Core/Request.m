@@ -8,6 +8,10 @@
 
 #import "Request.h"
 #import <objc/runtime.h>
+#import "NSObject+EasyJSON.h"
+#import "NSDictionary+EasyExtend.h"
+#import "NSArray+EasyExtend.h"
+#import "NSString+EasyExtend.h"
 
 NSString * const RequestStateSuccess = @"RequestDidSuccess";
 NSString * const RequestStateFailed = @"RequestDidFailed";
