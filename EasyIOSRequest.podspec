@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
-s.name         = "EasyIOS"
-s.version      = "1.0.2"
-s.summary      = "EasyIOS"
+s.name         = "EasyIOSRequest"
+s.version      = "0.0.1"
+s.summary      = "EasyIOSRequest"
 s.description  = <<-DESC
-EasyIOS网络请求
+EasyIOSRequest网络请求
 DESC
-s.homepage     = "https://github.com/lsy076/EasyIOS"
+s.homepage     = "https://github.com/lsy076/EasyIOSRequest"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author             = { "赖盛源" => "756486059@qq.com" }
 s.platform     = :ios, "8.0"
-s.source       = { :git => "https://github.com/lsy076/EasyIOS.git", :tag => s.version }
+s.source       = { :git => "https://github.com/lsy076/EasyIOSRequest.git", :tag => s.version }
 s.source_files = "Classes", "EasyIOS/EasyIOS/**/*.{h,m,mm}"
 s.requires_arc = true
 s.dependency 'AFNetworking'
