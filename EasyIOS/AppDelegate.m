@@ -20,9 +20,10 @@
     // Override point for customization after application launch.
     [Action actionConfigScheme:@"http" host:@"weather.gtimg.cn" client:@"" codeKey:@"" rightCode:200 msgKey:@""];
     
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager startMonitoring];
     
-    [RACObserve([AFNetworkReachabilityManager sharedManager], networkReachabilityStatus) subscribeNext:^(NSNumber *status) {
+    [RACObserve(manager, networkReachabilityStatus) subscribeNext:^(NSNumber *status) {
         AFNetworkReachabilityStatus networkStatus = [status intValue];
         switch (networkStatus) {
             case AFNetworkReachabilityStatusUnknown:
