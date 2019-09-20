@@ -169,9 +169,10 @@ DEF_SINGLETON(Action)
             [self checkCode:msg];
             
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:0];
+            NSString *dataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             
-            EZLog(@"网络请求结果 : %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-            
+            EZLog(@"网络请求结果 : %@", dataStr);
+            dataStr = @"";
         }else{
             @strongify(msg,self);
             msg.error = error;
