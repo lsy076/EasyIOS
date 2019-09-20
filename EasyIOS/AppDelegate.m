@@ -19,6 +19,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Action actionConfigScheme:@"http" host:@"weather.gtimg.cn" client:@"" codeKey:@"" rightCode:200 msgKey:@""];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    [RACObserve([AFNetworkReachabilityManager sharedManager], networkReachabilityStatus) subscribeNext:^(NSNumber *status) {
+        AFNetworkReachabilityStatus networkStatus = [status intValue];
+        switch (networkStatus) {
+            case AFNetworkReachabilityStatusUnknown:
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                EZLog(@"没网络");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                EZLog(@"数据流量");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                EZLog(@"Wifi");
+                break;
+        }
+    }];
+    
     return YES;
 }
 
