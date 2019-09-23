@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "EasyIOSRequest"
-s.version      = "0.0.6"
+s.version      = "0.0.7"
 s.summary      = "EasyIOSRequest"
 s.description  = <<-DESC
 EasyIOSRequest网络请求
