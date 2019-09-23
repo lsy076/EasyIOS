@@ -8,7 +8,6 @@
 
 #import "Action.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "EasyIOS.h"
 
 @interface Action()
 @property(nonatomic,assign)BOOL cacheEnable;
@@ -171,7 +170,7 @@ DEF_SINGLETON(Action)
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:0];
             NSString *dataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             
-            EZLog(@"网络请求结果(%@) : %@",msg.url.absoluteString , dataStr);
+            NSLog(@"网络请求结果(%@) : %@",msg.url.absoluteString , dataStr);
             dataStr = @"";
         }else{
             @strongify(msg,self);
