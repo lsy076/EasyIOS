@@ -15,6 +15,9 @@
 		19490AEC23322DCE003AEA4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19490AEB23322DCE003AEA4F /* main.m */; };
 		19490BC323323750003AEA4F /* RequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19490BC223323750003AEA4F /* RequestTest.m */; };
 		19490BC6233238E0003AEA4F /* SceneModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19490BC5233238E0003AEA4F /* SceneModelTest.m */; };
+		197B5315233DA43E008927B5 /* EntityConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 197B5310233DA43D008927B5 /* EntityConfig.m */; };
+		197B5316233DA43E008927B5 /* RequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 197B5313233DA43D008927B5 /* RequestConfig.m */; };
+		197B5317233DA43E008927B5 /* SceneModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 197B5314233DA43E008927B5 /* SceneModelConfig.m */; };
 		1984A97623336904001AD5C0 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984A94F23336904001AD5C0 /* Request.m */; };
 		1984A97723336904001AD5C0 /* SceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984A95023336904001AD5C0 /* SceneModel.m */; };
 		1984A97823336904001AD5C0 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984A95523336904001AD5C0 /* Action.m */; };
@@ -51,6 +54,12 @@
 		19490BC223323750003AEA4F /* RequestTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestTest.m; sourceTree = "<group>"; };
 		19490BC4233238E0003AEA4F /* SceneModelTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneModelTest.h; sourceTree = "<group>"; };
 		19490BC5233238E0003AEA4F /* SceneModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneModelTest.m; sourceTree = "<group>"; };
+		197B530F233DA43D008927B5 /* SceneModelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneModelConfig.h; sourceTree = "<group>"; };
+		197B5310233DA43D008927B5 /* EntityConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityConfig.m; sourceTree = "<group>"; };
+		197B5311233DA43D008927B5 /* RequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestConfig.h; sourceTree = "<group>"; };
+		197B5312233DA43D008927B5 /* EntityConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityConfig.h; sourceTree = "<group>"; };
+		197B5313233DA43D008927B5 /* RequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestConfig.m; sourceTree = "<group>"; };
+		197B5314233DA43E008927B5 /* SceneModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneModelConfig.m; sourceTree = "<group>"; };
 		1984A94D23336904001AD5C0 /* EasyIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyIOS.h; sourceTree = "<group>"; };
 		1984A94F23336904001AD5C0 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
 		1984A95023336904001AD5C0 /* SceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneModel.m; sourceTree = "<group>"; };
@@ -165,8 +174,14 @@
 				1984A95523336904001AD5C0 /* Action.m */,
 				1984A95423336904001AD5C0 /* Request.h */,
 				1984A94F23336904001AD5C0 /* Request.m */,
-				1984A95023336904001AD5C0 /* SceneModel.m */,
 				1984A95323336904001AD5C0 /* SceneModel.h */,
+				1984A95023336904001AD5C0 /* SceneModel.m */,
+				197B5312233DA43D008927B5 /* EntityConfig.h */,
+				197B5310233DA43D008927B5 /* EntityConfig.m */,
+				197B5311233DA43D008927B5 /* RequestConfig.h */,
+				197B5313233DA43D008927B5 /* RequestConfig.m */,
+				197B530F233DA43D008927B5 /* SceneModelConfig.h */,
+				197B5314233DA43E008927B5 /* SceneModelConfig.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -325,12 +340,15 @@
 				19490AE123322DB6003AEA4F /* ViewController.m in Sources */,
 				1984A97823336904001AD5C0 /* Action.m in Sources */,
 				1984A97B23336904001AD5C0 /* NSNumber+EasyExtend.mm in Sources */,
+				197B5315233DA43E008927B5 /* EntityConfig.m in Sources */,
 				1984A98023336904001AD5C0 /* NSObject+EasyTypeConversion.mm in Sources */,
 				1984A97A23336904001AD5C0 /* NSData+EasyExtend.m in Sources */,
 				1984A98223336904001AD5C0 /* NSObject+EasyJSON.mm in Sources */,
 				19490AEC23322DCE003AEA4F /* main.m in Sources */,
 				1984A97923336904001AD5C0 /* EasyKit.m in Sources */,
+				197B5316233DA43E008927B5 /* RequestConfig.m in Sources */,
 				1984A98623336904001AD5C0 /* NSObject+EasyProperty.mm in Sources */,
+				197B5317233DA43E008927B5 /* SceneModelConfig.m in Sources */,
 				1984A97723336904001AD5C0 /* SceneModel.m in Sources */,
 				1984A97F23336904001AD5C0 /* URLNavigation.m in Sources */,
 				1984A98423336904001AD5C0 /* pinyin.m in Sources */,
