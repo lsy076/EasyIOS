@@ -11,4 +11,7 @@
 @interface SceneModelConfig : SceneModel
 //RC4加密
 -(NSString *)encrypt:(NSString *)string;
+//获取设备唯一标示
++(NSString *)deviceId;
+
 @end

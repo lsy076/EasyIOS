@@ -7,7 +7,6 @@
 //
 
 #import "RequestConfig.h"
-#import <CommonCrypto/CommonDigest.h>
 
 @implementation RequestConfig
 

@@ -28,10 +28,7 @@ static NSString * identifierForVendorTag = @"identifierForVendor";
     
     if (!msg.output) return;
     
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:msg.output options:0 error:0];
-    NSString *dataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"网络请求结果(%@) : %@",msg.url.absoluteString , dataStr);
+    NSLog(@"网络请求结果(%@) : %@",msg.url.absoluteString , msg.output);
     
 }
 
@@ -114,6 +111,24 @@ static NSString * identifierForVendorTag = @"identifierForVendor";
     }];
     
     return string;
+}
+
++(NSString *)deviceId
+{
+    static NSString * uniqueIdentifier = nil;
+    if (uniqueIdentifier != nil) {
+        return uniqueIdentifier;
+    }
+    uniqueIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:identifierForVendorTag];
+    if( !uniqueIdentifier ) {
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+        uniqueIdentifier = [UIDevice currentDevice].identifierForVendor.UUIDString;
+#endif
+        [[NSUserDefaults standardUserDefaults] setObject:uniqueIdentifier forKey:identifierForVendorTag];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    return uniqueIdentifier;
 }
 
 @end
