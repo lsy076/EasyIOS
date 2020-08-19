@@ -14,11 +14,11 @@
 {
     [super loadRequest];
     
-    self.PATH = @"/aqi/01010508.json";
+    self.PATH = @"/dk2018/getdevicelist.asp";
     
     self.METHOD = @"GET";
     
-    self.acceptableContentTypes = [NSSet setWithObjects:@"application/x-javascript", @"application/json", @"text/json", @"text/javascript", nil];
+    self.acceptableContentTypes = [NSSet setWithObjects:@"application/x-javascript", @"application/json", @"text/json", @"text/javascript", @"text/html", nil];
 
 }
 

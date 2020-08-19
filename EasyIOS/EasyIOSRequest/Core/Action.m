@@ -162,6 +162,16 @@ DEF_SINGLETON(Action)
         
     } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if(error == nil){
+            if ([responseObject isKindOfClass:[NSArray class]]) {
+                NSDictionary *responseDict = @{
+                    @"isSuccess": @"1",
+                    @"data": responseObject
+                };
+                responseObject = responseDict;
+                msg.needCheckCode = NO;
+            } else {
+                msg.needCheckCode = YES;
+            }
             msg.output = responseObject;
             @strongify(msg,self);
             
