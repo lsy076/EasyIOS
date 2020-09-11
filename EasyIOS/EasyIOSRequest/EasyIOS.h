@@ -1,4 +1,4 @@
-//
+//  v1.0.6
 //  swift-bridge.h
 //  swiftTest
 //

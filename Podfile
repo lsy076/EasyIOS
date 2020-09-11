@@ -1,10 +1,10 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 inhibit_all_warnings!
 #use_frameworks!
 
 target 'EasyIOS' do
   
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 4.0'
 pod 'ReactiveObjC'
 pod 'JSONModel'
 
