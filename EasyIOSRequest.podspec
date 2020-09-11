@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "EasyIOSRequest"
-s.version      = "1.0.6"
+s.version      = "1.0.7"
 s.summary      = "EasyIOSRequest"
 s.description  = <<-DESC
 EasyIOSRequest网络请求
@@ -12,7 +12,7 @@ s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/lsy076/EasyIOSRequest.git", :tag => s.version }
 s.source_files = "Classes", "EasyIOS/EasyIOSRequest/**/*.{h,m,mm}"
 s.requires_arc = true
-s.dependency 'AFNetworking'
+s.dependency 'AFNetworking', '~> 4.0'
 s.dependency 'ReactiveObjC'
 s.dependency 'JSONModel'
 end
